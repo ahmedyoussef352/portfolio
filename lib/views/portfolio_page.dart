@@ -50,6 +50,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
 
   @override
   Widget build(BuildContext context) {
+    // This captures the width of the current screen
+  double screenWidth = MediaQuery.of(context).size.width;
+  
+  // This prints the width to your console every time the screen orientation changes
+  print("Current Screen Width: $screenWidth ✅");
     final viewModel = context.watch<PortfolioViewModel>();
     final maxWidth = 1100.0;
     final isMobile = MediaQuery.of(context).size.width < 768;

@@ -55,13 +55,19 @@ class CvRepository {
         items: [
           MobileDevelopmentItem(name: 'SQLite', icon: Icons.storage),
           MobileDevelopmentItem(name: 'Hive', icon: Icons.inventory_2),
-          MobileDevelopmentItem(name: 'Shared Preferences', icon: Icons.settings_suggest),
+          MobileDevelopmentItem(
+            name: 'Shared Preferences',
+            icon: Icons.settings_suggest,
+          ),
         ],
       ),
       MobileDevelopmentCategory(
         name: 'Backend Services',
         items: [
-          MobileDevelopmentItem(name: 'Firebase', icon: Icons.local_fire_department),
+          MobileDevelopmentItem(
+            name: 'Firebase',
+            icon: Icons.local_fire_department,
+          ),
         ],
       ),
       MobileDevelopmentCategory(
@@ -106,12 +112,18 @@ class CvRepository {
       ),
     ],
     softwareEngineering: [
-      SoftwareEngineeringItem(name: 'Data Structures', icon: Icons.account_tree_outlined),
+      SoftwareEngineeringItem(
+        name: 'Data Structures',
+        icon: Icons.account_tree_outlined,
+      ),
       SoftwareEngineeringItem(name: 'Algorithms', icon: Icons.show_chart),
       SoftwareEngineeringItem(name: 'Design Patterns', icon: Icons.extension),
       SoftwareEngineeringItem(name: 'SOLID Principles', icon: Icons.view_in_ar),
       SoftwareEngineeringItem(name: 'OOP', icon: Icons.category),
-      SoftwareEngineeringItem(name: 'Problem Solving', icon: Icons.lightbulb_outline),
+      SoftwareEngineeringItem(
+        name: 'Problem Solving',
+        icon: Icons.lightbulb_outline,
+      ),
     ],
     currentlyLearning: [],
     experiences: [
@@ -139,28 +151,102 @@ class CvRepository {
     ],
     projects: [
       Project(
-        name: 'Jeras & Dream / Make My Nekhal (Play Store / app Store)',
+        images: [
+          "assets/images/jeras_slides/1.jpeg",
+          "assets/images/jeras_slides/2.jpeg",
+          "assets/images/jeras_slides/3.jpeg",
+          "assets/images/jeras_slides/4.jpeg",
+          "assets/images/jeras_slides/5.jpeg",
+          "assets/images/jeras_slides/6.jpeg",
+        ],
+        logo: "assets/images/jeras.png",
+        name: 'Jeras - Quran - Islamic Values (Play Store / app Store)',
         description:
-            'Two production-level mobile apps developed and continuously updated for a Saudi company (remote). Implemented MVVM, SOLID, Cubit, authentication, and Firebase storage. Integrated Google APIs and Firestore.',
+            'Are you a parent looking to impart Islamic values to your children in a fun and interactive way? Look no further! Jeras app is the ideal solution for you and your family. With Jeras, you can create a personalized learning experience for your children, helping them learn about Islam through engaging activities and interactive content. Whether you want to teach them about the Quran, Islamic history, or important values, Jeras has got you covered. Download Jeras today and start nurturing your child’s Islamic education in an enjoyable and meaningful way.',
+        tags: [
+          'Flutter',
+          'Responsive UI',
+          'MVVM',
+          'Cubit',
+          'SOLID',
+          'Firebase',
+          'Google APIs',
+        ],
+      ),
+      Project(
+        images: [
+          "assets/images/dream_slides/1.jpeg",
+          "assets/images/dream_slides/2.jpeg",
+          "assets/images/dream_slides/3.jpeg",
+          "assets/images/dream_slides/4.jpeg",
+          "assets/images/dream_slides/5.jpeg",
+          "assets/images/dream_slides/6.jpeg",
+          "assets/images/dream_slides/7.jpeg",
+          "assets/images/dream_slides/8.jpeg",
+        ],
+        logo: "assets/images/dream_logo.png",
+        name: 'Dream – Dream interpretation (Play Store / app Store)',
+        description:
+            'Start your journey of self-discovery with the Dream app, Dream App is a specialized mobile platform that connects users with expert consultants for personalized dream interpretation. It offers a seamless experience through private voice calls, secure messaging, and a robust booking system. With multilingual support and integrated digital payments, it provides a professional and confidential environment for users to uncover the meanings behind their dreams.',
         tags: ['Flutter', 'MVVM', 'Cubit', 'SOLID', 'Firebase', 'Google APIs'],
       ),
       Project(
+        images: [
+          "assets/images/mmn_slides/1.jpeg",
+          "assets/images/mmn_slides/2.jpeg",
+          "assets/images/mmn_slides/3.jpeg",
+          "assets/images/mmn_slides/4.jpeg",
+          "assets/images/mmn_slides/5.jpeg",
+          "assets/images/mmn_slides/6.jpeg",
+          "assets/images/mmn_slides/7.jpeg",
+          "assets/images/mmn_slides/8.jpeg",
+        ],
+        logo: "assets/images/makemynikah.png",
+        name: 'MakeMyNikah (Play Store / app Store)',
+        description:
+            'Welcome to Make My Nikah, the premier Islamic marriage app dedicated to fostering beautiful and everlasting unions under the guidance of Islam. Founded and endorsed by respected Islamic scholars and renowned callers to Islam, our app is designed not just to connect you with a compatible Muslim spouse but to enrich your journey towards a fulfilling married life. With a user-friendly interface and a commitment to Islamic values, Make My Nikah is your trusted companion in finding love and building a strong foundation for your future together.',
+        tags: ['Flutter', 'MVVM', 'Cubit', 'SOLID', 'Firebase', 'Google APIs'],
+      ),
+      Project(
+        images: [
+          "assets/images/medical_slides/11.jpeg",
+          "assets/images/medical_slides/10.jpeg",
+          "assets/images/medical_slides/9.jpeg",
+          "assets/images/medical_slides/8.jpeg",
+          "assets/images/medical_slides/7.jpeg",
+          "assets/images/medical_slides/6.jpeg",
+          "assets/images/medical_slides/5.jpeg",
+          "assets/images/medical_slides/4.jpeg",
+          "assets/images/medical_slides/3.jpeg",
+          "assets/images/medical_slides/1.jpeg",
+          "assets/images/medical_slides/2.jpeg",
+        ],
+        logo: "assets/images/medical_app.jpg",
         name: 'Medical App',
         description:
-            'Appointments system with dashboards and analytics for users and doctors. Frontend in Flutter; backend in PHP.',
-        tags: ['Flutter', 'PHP', 'CRUD', 'Analytics'],
+            'DOC Spot is a specialized healthcare platform that connects patients with medical specialists. The app enables users to filter doctors by specialty—such as Pediatricians or Neurosurgeons—view professional credentials, and manage appointment bookings or reschedules through a simplified mobile interface.',
+        tags: ['Flutter','Clean Architecture', 'Api','PHP', 'CRUD', 'Analytics'],
       ),
       Project(
+        images: [
+          "assets/images/vegi_slides/12.jpeg",
+          "assets/images/vegi_slides/11.jpeg",
+          "assets/images/vegi_slides/10.jpeg",
+          "assets/images/vegi_slides/9.jpeg",
+          "assets/images/vegi_slides/8.jpeg",
+          "assets/images/vegi_slides/7.jpeg",
+          "assets/images/vegi_slides/6.jpeg",
+          "assets/images/vegi_slides/5.jpeg",
+          "assets/images/vegi_slides/4.jpeg",
+          "assets/images/vegi_slides/3.jpeg",
+          "assets/images/vegi_slides/2.jpeg",
+          "assets/images/vegi_slides/1.jpeg",
+        ],
+        logo: "assets/images/vegi_app.png",
         name: 'Vegi App (E-commerce)',
         description:
-            'Client purchases and admin product management with payment, authentication, and shopping cart flows.',
-        tags: ['Flutter', 'Provider', 'MVVM', 'E-commerce'],
-      ),
-      Project(
-        name: 'Todo App (SQLite + Firebase)',
-        description:
-            'Note-taking app with Firebase authentication (Google sign-in) and dual storage using SQLite.',
-        tags: ['Flutter', 'SQLite', 'Firebase', 'Bloc', 'Widgets'],
+            'Vegi is a cross-platform e-commerce mobile application designed for seamless shopping and delivery. While the branding suggests a focus on fresh produce, the platform serves as a versatile marketplace featuring diverse categories including groceries, high-end electronics (smartphones and tablets), and cosmetics.',
+        tags: ['Flutter','Clean Architecture','Firebase', 'Provider', 'MVVM', 'E-commerce'],
       ),
     ],
     email: 'ay3220187@gmail.com',

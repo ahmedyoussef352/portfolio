@@ -118,11 +118,15 @@ class Experience {
 
 class Project {
   final String name;
+  final String logo;
   final String description;
   final List<String> tags;
+  final List<String>? images;
   const Project({
     required this.name,
+    required this.logo,
     required this.description,
     required this.tags,
+    this.images,
   });
 }
