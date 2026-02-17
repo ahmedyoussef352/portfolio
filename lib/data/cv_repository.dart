@@ -250,7 +250,7 @@ class CvRepository {
       ),
     ],
     email: 'ay3220187@gmail.com',
-    phone: '+20114431832',
+    phone: '+201095192300',
     location: 'Cairo, Egypt',
     socials: {
       'GitHub': 'https://github.com/ahmedyoussef352',

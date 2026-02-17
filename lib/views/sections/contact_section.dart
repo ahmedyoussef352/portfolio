@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../models/cv_data.dart';
 
 class ContactSection extends StatelessWidget {
@@ -8,14 +10,34 @@ class ContactSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final entries = <Widget>[
-      _ContactRow(icon: Icons.email, label: data.email),
+      _ContactRow(
+        icon: Icons.email,
+        label: data.email,
+        link: true,
+        linkType: "",
+      ),
       if (data.phone.isNotEmpty)
-        _ContactRow(icon: Icons.phone, label: data.phone),
-      _ContactRow(icon: Icons.location_on, label: data.location),
+        _ContactRow(
+          icon: Icons.phone,
+          label: data.phone,
+          link: true,
+          linkType: "",
+        ),
+      _ContactRow(
+        icon: Icons.location_on,
+        label: data.location,
+        link: false,
+        linkType: "",
+      ),
     ];
     for (final entry in data.socials.entries) {
       entries.add(
-        _ContactRow(icon: Icons.link, label: '${entry.key}: ${entry.value}'),
+        _ContactRow(
+          icon: Icons.link,
+          label: entry.value,
+          link: true,
+          linkType: entry.key,
+        ),
       );
     }
     return Column(
@@ -32,7 +54,15 @@ class ContactSection extends StatelessWidget {
 class _ContactRow extends StatelessWidget {
   final IconData icon;
   final String label;
-  const _ContactRow({required this.icon, required this.label});
+  final String linkType;
+  final bool link;
+
+  const _ContactRow({
+    required this.icon,
+    required this.label,
+    required this.link,
+    required this.linkType,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +72,30 @@ class _ContactRow extends StatelessWidget {
         children: [
           Icon(icon, size: 20),
           const SizedBox(width: 8),
-          Expanded(child: SelectableText(label)),
+          Expanded(
+            child: Text(
+              linkType == "" ? label : '$linkType : $label',
+              // style: const TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+            ),
+          ),
+          // --- COPY BUTTON ---
+          link
+              ? IconButton(
+                  icon: const Icon(Icons.copy, size: 18, color: Colors.grey),
+                  onPressed: () {
+                    Clipboard.setData(ClipboardData(text: label)).then((_) {
+                      // Show a small confirmation toast/snackbar
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('$label copied to clipboard!'),
+                          duration: const Duration(seconds: 2),
+                        ),
+                      );
+                    });
+                  },
+                  tooltip: 'Copy to clipboard',
+                )
+              : const SizedBox.shrink(), // Empty space when not a link
         ],
       ),
     );
