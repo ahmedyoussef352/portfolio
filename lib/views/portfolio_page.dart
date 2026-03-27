@@ -4,7 +4,6 @@ import '../viewmodels/portfolio_viewmodel.dart';
 import 'widgets/animated_gradient_background.dart';
 import 'widgets/fade_slide.dart';
 import 'sections/hero_section.dart';
-import 'sections/about_section.dart';
 import 'sections/programming_languages_section.dart';
 import 'sections/mobile_development_section.dart';
 import 'sections/tools_section.dart';
@@ -24,7 +23,6 @@ class PortfolioPage extends StatefulWidget {
 class _PortfolioPageState extends State<PortfolioPage> {
   final ScrollController _scrollController = ScrollController();
   final GlobalKey _homeKey = GlobalKey();
-  final GlobalKey _aboutKey = GlobalKey();
   final GlobalKey _skillsKey = GlobalKey();
   final GlobalKey _experienceKey = GlobalKey();
   final GlobalKey _projectsKey = GlobalKey();
@@ -85,7 +83,6 @@ class _PortfolioPageState extends State<PortfolioPage> {
               ),
               actions: [
                 _NavButton(label: 'Home', onTap: () => _scrollTo(_homeKey)),
-                _NavButton(label: 'About', onTap: () => _scrollTo(_aboutKey)),
                 _NavButton(label: 'Skills', onTap: () => _scrollTo(_skillsKey)),
                 _NavButton(label: 'Experience', onTap: () => _scrollTo(_experienceKey)),
                 _NavButton(label: 'Projects', onTap: () => _scrollTo(_projectsKey)),
@@ -128,15 +125,6 @@ class _PortfolioPageState extends State<PortfolioPage> {
             onTap: () {
               Navigator.pop(context);
               _scrollTo(_homeKey);
-            },
-          ),
-          _AnimatedDrawerItem(
-            delay: const Duration(milliseconds: 150),
-            icon: Icons.person,
-            label: 'About',
-            onTap: () {
-              Navigator.pop(context);
-              _scrollTo(_aboutKey);
             },
           ),
           _AnimatedDrawerItem(
@@ -189,7 +177,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
             : constraints.maxWidth > 768
             ? 32.0
             : 16.0;
-        final verticalSpacing = constraints.maxWidth > 768 ? 48.0 : 32.0;
+        final verticalSpacing = constraints.maxWidth > 768 ? 24.0 : 16.0;
         
         return ScrollConfiguration(
           behavior: _SmoothScrollBehavior(),
@@ -212,14 +200,6 @@ class _PortfolioPageState extends State<PortfolioPage> {
                         child: FadeSlide(
                           delay: const Duration(milliseconds: 0),
                           child: HeroSection(data: viewModel.cvData),
-                        ),
-                      ),
-                      SizedBox(height: verticalSpacing),
-                      _SectionContainer(
-                        key: _aboutKey,
-                        child: FadeSlide(
-                          delay: const Duration(milliseconds: 150),
-                          child: AboutSection(data: viewModel.cvData),
                         ),
                       ),
                       SizedBox(height: verticalSpacing),

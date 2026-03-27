@@ -5,7 +5,6 @@ class CvData {
   final String initials;
   final String title;
   final String summary;
-  final String about;
   final List<String> skills;
   final List<ProgrammingLanguage> programmingLanguages;
   final List<MobileDevelopmentCategory> mobileDevelopment;
@@ -24,7 +23,6 @@ class CvData {
     required this.initials,
     required this.title,
     required this.summary,
-    required this.about,
     required this.skills,
     required this.programmingLanguages,
     required this.mobileDevelopment,
@@ -43,64 +41,43 @@ class CvData {
 class ProgrammingLanguage {
   final String name;
   final IconData icon;
-  const ProgrammingLanguage({
-    required this.name,
-    required this.icon,
-  });
+  const ProgrammingLanguage({required this.name, required this.icon});
 }
 
 class MobileDevelopmentCategory {
   final String name;
   final List<MobileDevelopmentItem> items;
-  const MobileDevelopmentCategory({
-    required this.name,
-    required this.items,
-  });
+  const MobileDevelopmentCategory({required this.name, required this.items});
 }
 
 class MobileDevelopmentItem {
   final String name;
   final IconData icon;
-  const MobileDevelopmentItem({
-    required this.name,
-    required this.icon,
-  });
+  const MobileDevelopmentItem({required this.name, required this.icon});
 }
 
 class ToolCategory {
   final String name;
   final List<ToolItem> items;
-  const ToolCategory({
-    required this.name,
-    required this.items,
-  });
+  const ToolCategory({required this.name, required this.items});
 }
 
 class ToolItem {
   final String name;
   final IconData icon;
-  const ToolItem({
-    required this.name,
-    required this.icon,
-  });
+  const ToolItem({required this.name, required this.icon});
 }
 
 class SoftwareEngineeringItem {
   final String name;
   final IconData icon;
-  const SoftwareEngineeringItem({
-    required this.name,
-    required this.icon,
-  });
+  const SoftwareEngineeringItem({required this.name, required this.icon});
 }
 
 class LearningItem {
   final String name;
   final IconData icon;
-  const LearningItem({
-    required this.name,
-    required this.icon,
-  });
+  const LearningItem({required this.name, required this.icon});
 }
 
 class Experience {
@@ -122,11 +99,13 @@ class Project {
   final String description;
   final List<String> tags;
   final List<String>? images;
+  final String link;
   const Project({
     required this.name,
     required this.logo,
     required this.description,
     required this.tags,
     this.images,
+    required this.link
   });
 }

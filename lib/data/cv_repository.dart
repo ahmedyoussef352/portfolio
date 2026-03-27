@@ -5,11 +5,9 @@ class CvRepository {
   static const CvData _cvData = CvData(
     name: 'AHMED YOUSSEF',
     initials: 'AY',
-    title: 'Flutter Developer',
+    title: 'Software Engineer, Flutter',
     summary:
-        'Junior Mobile Developer specializing in Flutter. Skilled in MVVM, state management (Cubit/Provider/Bloc), and backend integration with Firebase. Focused on building responsive, user-friendly apps.',
-    about:
-        'Write a concise summary about your background, strengths, and what you are passionate about. This section should quickly communicate who you are and what you do.',
+        """I am a Flutter Developer with over 2 years of experience in architecting high-performance, cross-platform applications for iOS,Android, and the Web. I have a proven track record of delivering scalable solutions that have served over 100,000 active users, ensuring seamless performance and a 99% crash-free rate. I specialize in implementing Clean Architecture (MVVM) and SOLID principles to build maintainable codebases, while reducing technical debt by 30% through optimized API integrations and advanced state management with Bloc and Provider. I am passionate about leveraging the Firebase ecosystem and RESTful services to create responsive, user-centric experiences across all screen sizes.""",
     skills: [
       'Flutter',
       'Dart',
@@ -128,7 +126,14 @@ class CvRepository {
     currentlyLearning: [],
     experiences: [
       Experience(
-        role: 'Junior Flutter Developer',
+        role: 'Flutter Developer',
+        company: 'Freelance Flutter Developer',
+        period: '2025 – Present',
+        description:
+            'Active Professional Development: Balanced military service with part-time freelance projects and technical upskilling, focusing on Google Maps SDK and location-based services, Project Delivery: Successfully developed and delivered custom, Flutter tasks for various clients, implementing real-time features and optimizing app responsiveness, Continuous Learning: Mastered the latest Flutter features and industry best practices to ensure immediate readiness for full-time roles post-service.',
+      ),
+      Experience(
+        role: 'Flutter Developer',
         company: 'Focal Point (Saudi Company, Remote)',
         period: '2023 – 2025 • Full-time',
         description:
@@ -151,6 +156,7 @@ class CvRepository {
     ],
     projects: [
       Project(
+        link: "https://play.google.com/store/apps/details?id=com.app.jeras",
         images: [
           "assets/images/jeras_slides/1.jpeg",
           "assets/images/jeras_slides/2.jpeg",
@@ -174,6 +180,8 @@ class CvRepository {
         ],
       ),
       Project(
+        link:
+            "https://play.google.com/store/apps/details?id=com.abdulazizahmed.dream",
         images: [
           "assets/images/dream_slides/1.jpeg",
           "assets/images/dream_slides/2.jpeg",
@@ -191,6 +199,8 @@ class CvRepository {
         tags: ['Flutter', 'MVVM', 'Cubit', 'SOLID', 'Firebase', 'Google APIs'],
       ),
       Project(
+        link:
+            "https://play.google.com/store/apps/details?id=com.app.MakeMyNikah",
         images: [
           "assets/images/mmn_slides/1.jpeg",
           "assets/images/mmn_slides/2.jpeg",
@@ -208,6 +218,7 @@ class CvRepository {
         tags: ['Flutter', 'MVVM', 'Cubit', 'SOLID', 'Firebase', 'Google APIs'],
       ),
       Project(
+        link: "https://github.com/ahmedyoussef352/medical_app",
         images: [
           "assets/images/medical_slides/11.jpeg",
           "assets/images/medical_slides/10.jpeg",
@@ -225,9 +236,17 @@ class CvRepository {
         name: 'Medical App',
         description:
             'DOC Spot is a specialized healthcare platform that connects patients with medical specialists. The app enables users to filter doctors by specialty—such as Pediatricians or Neurosurgeons—view professional credentials, and manage appointment bookings or reschedules through a simplified mobile interface.',
-        tags: ['Flutter','Clean Architecture', 'Api','PHP', 'CRUD', 'Analytics'],
+        tags: [
+          'Flutter',
+          'Clean Architecture',
+          'Api',
+          'PHP',
+          'CRUD',
+          'Analytics',
+        ],
       ),
       Project(
+        link: "https://github.com/ahmedyoussef352/Vegi-App-pro",
         images: [
           "assets/images/vegi_slides/12.jpeg",
           "assets/images/vegi_slides/11.jpeg",
@@ -246,7 +265,14 @@ class CvRepository {
         name: 'Vegi App (E-commerce)',
         description:
             'Vegi is a cross-platform e-commerce mobile application designed for seamless shopping and delivery. While the branding suggests a focus on fresh produce, the platform serves as a versatile marketplace featuring diverse categories including groceries, high-end electronics (smartphones and tablets), and cosmetics.',
-        tags: ['Flutter','Clean Architecture','Firebase', 'Provider', 'MVVM', 'E-commerce'],
+        tags: [
+          'Flutter',
+          'Clean Architecture',
+          'Firebase',
+          'Provider',
+          'MVVM',
+          'E-commerce',
+        ],
       ),
     ],
     email: 'ay3220187@gmail.com',

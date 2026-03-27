@@ -1,6 +1,5 @@
 // This file exports all section widgets
 export 'hero_section.dart';
-export 'about_section.dart';
 export 'programming_languages_section.dart';
 export 'mobile_development_section.dart';
 export 'tools_section.dart';
