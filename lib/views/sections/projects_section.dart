@@ -73,9 +73,7 @@ class _ProjectsSectionState extends State<ProjectsSection> {
             return InkWell(
               onTap: () {
                 setState(() {
-                  _launchUrl(
-                    p.link.toString()
-                  );
+                  _launchUrl(p.link.toString());
                 });
               },
               child: HoverCard(
@@ -123,13 +121,21 @@ class _ProjectsSectionState extends State<ProjectsSection> {
                               ), // Space between logo and text
 
                               Expanded(
-                                child: Text(
-                                  p.name,
-                                  style: Theme.of(context).textTheme.titleMedium
-                                      ?.copyWith(
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: isMedium ? 16 : 14,
-                                      ),
+                                child: MouseRegion(
+                                  child: Text(
+                                    p.name,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .titleMedium
+                                        ?.copyWith(
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: isMedium ? 16 : 14,
+                                          color: Colors.blue,
+                                          decoration: TextDecoration
+                                              .underline, // الخط التحتاني ضروري
+                                          decorationColor: Colors.blue,
+                                        ),
+                                  ),
                                 ),
                               ),
                             ],

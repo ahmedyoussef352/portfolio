@@ -233,7 +233,7 @@ class CvRepository {
           "assets/images/medical_slides/2.jpeg",
         ],
         logo: "assets/images/medical_app.jpg",
-        name: 'Medical App',
+        name: 'Medical App (Github)',
         description:
             'DOC Spot is a specialized healthcare platform that connects patients with medical specialists. The app enables users to filter doctors by specialty—such as Pediatricians or Neurosurgeons—view professional credentials, and manage appointment bookings or reschedules through a simplified mobile interface.',
         tags: [
@@ -262,7 +262,7 @@ class CvRepository {
           "assets/images/vegi_slides/1.jpeg",
         ],
         logo: "assets/images/vegi_app.png",
-        name: 'Vegi App (E-commerce)',
+        name: 'Vegi App (E-commerce)(Github)',
         description:
             'Vegi is a cross-platform e-commerce mobile application designed for seamless shopping and delivery. While the branding suggests a focus on fresh produce, the platform serves as a versatile marketplace featuring diverse categories including groceries, high-end electronics (smartphones and tablets), and cosmetics.',
         tags: [
